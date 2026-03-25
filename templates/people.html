@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Faculty &mdash; {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<section class="page">
+  <h1>Faculty</h1>
+
+  {% set faculty = PEOPLE | selectattr('role', 'in', ['faculty', 'affiliate']) | list | sort(attribute='weight') %}
+  {% if faculty %}
+  <div class="people-grid">
+    {% for person in faculty %}
+    {% include "person-card.html" %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+</section>
+{% endblock %}

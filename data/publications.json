@@ -1,0 +1,31 @@
+[
+  {
+    "key": "doe2026contextual",
+    "title": "A Formal Treatment of Contextual Effects",
+    "authors": [
+      "Jane Doe",
+      "Alex Smith"
+    ],
+    "venue": "Proceedings of the ACM SIGPLAN Symposium on Principles of Programming Languages (POPL)",
+    "year": 2026,
+    "doi": "10.1145/0000000.0000001",
+    "url": "",
+    "arxiv": "",
+    "abstract": "We present a novel approach to reasoning about contextual effects in programming languages with algebraic effect handlers."
+  },
+  {
+    "key": "smith2025verification",
+    "title": "Verified Compilation of Effect Handlers",
+    "authors": [
+      "Alex Smith",
+      "Jane Doe",
+      "John Roe"
+    ],
+    "venue": "Proceedings of the ACM SIGPLAN International Conference on Functional Programming (ICFP)",
+    "year": 2025,
+    "doi": "10.1145/0000000.0000002",
+    "url": "",
+    "arxiv": "2501.12345",
+    "abstract": "We present a verified compiler from a language with algebraic effects to a low-level continuation-passing style intermediate representation."
+  }
+]

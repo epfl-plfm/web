@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Bash(hugo:*)",
+      "WebFetch(domain:people.epfl.ch)",
+      "WebFetch(domain:natefoster.org)",
+      "WebFetch(domain:vca.epfl.ch)",
+      "WebFetch(domain:conf.researchr.org)",
+      "WebFetch(domain:people.csail.mit.edu)",
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python3:*)",
+      "Bash(.venv/bin/pip install:*)",
+      "Bash(.venv/bin/pelican:*)",
+      "Bash(/Users/nate/Desktop/plfm-web/.gitignore:*)",
+      "WebFetch(domain:systemf.epfl.ch)"
+    ]
+  }
+}

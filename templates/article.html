@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} &mdash; {{ SITENAME }}{% endblock %}
+
+{% block content %}
+{% if article.category.name == 'seminar' %}
+
+<article class="page">
+  <h1>{{ article.title }}</h1>
+  <div class="talk-details">
+    <p><strong>Speaker:</strong> {{ article.speaker }}{% if article.affiliation %}, {{ article.affiliation }}{% endif %}</p>
+    <p><strong>Date:</strong> {{ article.date.strftime('%A, %B %-d, %Y &mdash; %H:%M') }}</p>
+    {% if article.location %}<p><strong>Location:</strong> {{ article.location }}</p>{% endif %}
+  </div>
+  {% if article.content %}
+  <h2>Abstract</h2>
+  {{ article.content }}
+  {% endif %}
+  <p class="back-link"><a href="{{ SITEURL }}/seminar/">&larr; All talks</a></p>
+</article>
+
+{% else %}
+
+<article class="page">
+  <header>
+    <time datetime="{{ article.date.strftime('%Y-%m-%d') }}">{{ article.date.strftime('%B %-d, %Y') }}</time>
+    <h1>{{ article.title }}</h1>
+  </header>
+  {{ article.content }}
+  <p class="back-link"><a href="{{ SITEURL }}/news/">&larr; All news</a></p>
+</article>
+
+{% endif %}
+{% endblock %}

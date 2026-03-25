@@ -1,0 +1,14 @@
+<div class="person-card">
+  {% if person.photo %}
+  <img class="person-photo" src="{{ SITEURL }}/static/images/{{ person.photo }}" alt="Photo of {{ person.name }}">
+  {% else %}
+  <div class="person-photo person-photo-placeholder"></div>
+  {% endif %}
+  <div class="person-info">
+    <p class="person-name">
+      {% if person.website %}<a href="{{ person.website }}">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}
+    </p>
+    {% if person.position %}<p class="person-position">{{ person.position }}</p>{% endif %}
+    {% if person.lab %}<p class="person-lab">{% if person.lab_url %}<a href="{{ person.lab_url }}">{{ person.lab }}</a>{% else %}{{ person.lab }}{% endif %}</p>{% endif %}
+  </div>
+</div>

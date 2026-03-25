@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}PLFM Seminar &mdash; {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<section class="page">
+  <h1>PLFM Seminar</h1>
+
+  <div class="seminar-tabs" role="tablist">
+    <button class="seminar-tab active" role="tab" aria-selected="true" data-tab="about">About</button>
+    <button class="seminar-tab" role="tab" aria-selected="false" data-tab="schedule">Schedule</button>
+  </div>
+
+  <div id="tab-about" class="seminar-tab-panel">
+    <div class="seminar-info-box">
+      <p><strong>Usually Tuesdays at 14:00</strong> &mdash; INR 331</p>
+    </div>
+
+    <p>An informal PL seminar open to all. The format is fluid: at each session, someone presents a research paper or idea they found interesting, demos their own work, dry runs a talk they are preparing, or proposes a talk to watch together &mdash; and there is always plenty of free-form discussion during and after the presentation. There is no &ldquo;requirement&rdquo; or set schedule to present, as we usually have enough spontaneous proposals. Take a look at the sort of topics we&rsquo;ve had in the recent past in the <a href="#" class="tab-link" data-tab="schedule">Schedule</a> tab.</p>
+
+    <p class="seminar-mailing-list">To receive updates, subscribe to the mailing list by sending an email to <a href="mailto:pl-seminar-subscribe@listes.epfl.ch">pl-seminar-subscribe@listes.epfl.ch</a>.</p>
+  </div>
+
+  <div id="tab-schedule" class="seminar-tab-panel" hidden>
+    <div class="seminar-sheet-wrapper">
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyPCyTkbcH3xMh_SxtmbQCzWrYmHO6DKuZt0e604o8VDGXIdUVv6jlw21cGRgqN3MSSJimF9eOj4kD/pubhtml?gid=0&amp;single=true"
+        class="seminar-sheet"
+        title="PLFM Seminar Schedule"
+        loading="lazy"
+        frameborder="0"
+      ></iframe>
+    </div>
+  </div>
+
+</section>
+
+<script>
+  (function () {
+    var tabs = document.querySelectorAll('.seminar-tab');
+    var panels = document.querySelectorAll('.seminar-tab-panel');
+
+    function activate(tabName) {
+      tabs.forEach(function (t) {
+        var on = t.dataset.tab === tabName;
+        t.classList.toggle('active', on);
+        t.setAttribute('aria-selected', on);
+      });
+      panels.forEach(function (p) {
+        p.hidden = p.id !== 'tab-' + tabName;
+      });
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () { activate(t.dataset.tab); });
+    });
+
+    document.querySelectorAll('.tab-link').forEach(function (l) {
+      l.addEventListener('click', function (e) {
+        e.preventDefault();
+        activate(l.dataset.tab);
+      });
+    });
+  })();
+</script>
+{% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  <meta name="description" content="{{ DESCRIPTION }}">
+  <link rel="stylesheet" href="{{ SITEURL }}/static/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-banner">
+      <a href="https://www.epfl.ch" class="epfl-logo-link">
+        <img src="{{ SITEURL }}/static/images/epfl-logo.svg" alt="EPFL" class="epfl-logo">
+      </a>
+      <span class="banner-divider" aria-hidden="true"></span>
+      <a href="{{ SITEURL }}/" class="lab-name">Programming Languages &amp; Formal Methods Group</a>
+    </div>
+    <nav class="site-nav">
+      <ul class="nav-links">
+        {% if page is defined %}{% set _s = page.slug %}{% else %}{% set _s = '' %}{% endif %}
+        <li><a href="{{ SITEURL }}/"{% if _s == 'home' %} class="active"{% endif %}>Home</a></li>
+        <li><a href="{{ SITEURL }}/people/"{% if _s == 'people' %} class="active"{% endif %}>Faculty</a></li>
+        <li><a href="{{ SITEURL }}/seminar/"{% if _s == 'seminar' %} class="active"{% endif %}>Seminar</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    <p><a href="{{ SITEURL }}/">{{ GROUP_NAME }}</a> &middot; <a href="https://ic.epfl.ch">{{ SCHOOL }}</a> &middot; <a href="https://www.epfl.ch">{{ UNIVERSITY }}</a></p>
+  </footer>
+</body>
+</html>

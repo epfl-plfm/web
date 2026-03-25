@@ -1,0 +1,133 @@
+# Core Faculty
+- name: "Thomas Bourgeat"
+  role: faculty
+  position: "Tenure-Track Assistant Professor"
+  website: "https://people.epfl.ch/thomas.bourgeat"
+  email: "thomas.bourgeat@epfl.ch"
+  photo: "people/thomas-bourgeat.jpg"
+  lab: "VCA"
+  lab_url: "https://vca.epfl.ch"
+  interests: []
+  weight: 10
+
+- name: "Nate Foster"
+  role: faculty
+  position: "Full Professor"
+  website: "https://people.epfl.ch/nate.foster"
+  email: "nate.foster@epfl.ch"
+  photo: "people/nate-foster.png"
+  lab: "LASeR"
+  lab_url: "https://laser.epfl.ch"
+  interests: []
+  weight: 50
+
+- name: "Viktor Kuncak"
+  role: faculty
+  position: "Associate Professor"
+  website: "https://people.epfl.ch/viktor.kuncak"
+  email: "viktor.kuncak@epfl.ch"
+  photo: "people/viktor-kuncak.jpg"
+  lab: "LARA"
+  lab_url: "https://lara.epfl.ch"
+  interests: []
+  weight: 90
+
+- name: "Martin Odersky"
+  role: faculty
+  position: "Full Professor"
+  website: "https://people.epfl.ch/martin.odersky"
+  email: "martin.odersky@epfl.ch"
+  photo: "people/martin-odersky.jpg"
+  lab: "LAMP"
+  lab_url: "https://lamp.epfl.ch"
+  interests: []
+  weight: 100
+
+- name: "Clément Pit-Claudel"
+  role: faculty
+  position: "Tenure-Track Assistant Professor"
+  website: "https://people.epfl.ch/clement.pit-claudel"
+  email: "clement.pit-claudel@epfl.ch"
+  photo: "people/clement-pit-claudel.jpg"
+  lab: "SYSTEMF"
+  lab_url: "https://systemf.epfl.ch"
+  interests: []
+  weight: 120
+
+# Affiliate Faculty
+- name: "George Candea"
+  role: affiliate
+  position: "Full Professor"
+  website: "https://people.epfl.ch/george.candea"
+  email: "george.candea@epfl.ch"
+  photo: "people/george-candea.jpg"
+  lab: "DSL"
+  lab_url: "https://dslab.epfl.ch"
+  interests: []
+  weight: 20
+
+- name: "Babak Falsafi"
+  role: affiliate
+  position: "Full Professor"
+  website: "https://people.epfl.ch/babak.falsafi"
+  email: "babak.falsafi@epfl.ch"
+  photo: "people/babak-falsafi.jpg"
+  lab: "PARSA"
+  lab_url: "https://parsa.epfl.ch"
+  interests: []
+  weight: 30
+
+- name: "Bryan Ford"
+  role: affiliate
+  position: "Associate Professor"
+  website: "https://people.epfl.ch/bryan.ford"
+  email: "bryan.ford@epfl.ch"
+  photo: "people/bryan-ford.jpg"
+  lab: "DEDIS"
+  lab_url: "https://dedis.epfl.ch"
+  interests: []
+  weight: 40
+
+- name: "Rachid Guerraoui"
+  role: affiliate
+  position: "Full Professor"
+  website: "https://people.epfl.ch/rachid.guerraoui"
+  email: "rachid.guerraoui@epfl.ch"
+  photo: "people/rachid-guerraoui.jpg"
+  lab: "DCL"
+  lab_url: "https://dcl.epfl.ch"
+  interests: []
+  weight: 60
+
+- name: "Wenzel Jakob"
+  role: affiliate
+  position: "Associate Professor"
+  website: "https://people.epfl.ch/wenzel.jakob"
+  email: "wenzel.jakob@epfl.ch"
+  photo: "people/wenzel-jakob.jpg"
+  lab: "RGL"
+  lab_url: "https://rgl.epfl.ch"
+  interests: []
+  weight: 70
+
+- name: "Christoph Koch"
+  role: affiliate
+  position: "Full Professor"
+  website: "https://people.epfl.ch/christoph.koch"
+  email: "christoph.koch@epfl.ch"
+  photo: "people/christoph-koch.jpg"
+  lab: "DATA"
+  lab_url: "https://data.epfl.ch"
+  interests: []
+  weight: 80
+
+- name: "Mathias Payer"
+  role: affiliate
+  position: "Full Professor"
+  website: "https://people.epfl.ch/mathias.payer"
+  email: "mathias.payer@epfl.ch"
+  photo: "people/mathias-payer.jpg"
+  lab: "HexHive"
+  lab_url: "https://hexhive.epfl.ch"
+  interests: []
+  weight: 110

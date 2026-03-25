@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Publications &mdash; {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<section class="page">
+  <h1>Publications</h1>
+  {% if page.content %}{{ page.content }}{% endif %}
+
+  {% set years = PUBLICATIONS | map(attribute='year') | list | unique | sort(reverse=True) | list %}
+  {% for year in years %}
+  <h2 id="y{{ year }}">{{ year }}</h2>
+  <ul class="pub-list">
+    {% for pub in PUBLICATIONS if pub.year == year %}
+    <li class="pub-item">
+      <span class="pub-authors">{{ pub.authors | join(', ') }}</span>.
+      <span class="pub-title">{{ pub.title }}</span>.
+      {% if pub.venue %}<span class="pub-venue">{{ pub.venue }}</span>.{% endif %}
+      <span class="pub-links">
+        {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}">[DOI]</a>{% endif %}
+        {% if pub.url %}<a href="{{ pub.url }}">[PDF]</a>{% endif %}
+        {% if pub.arxiv %}<a href="https://arxiv.org/abs/{{ pub.arxiv }}">[arXiv]</a>{% endif %}
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</section>
+{% endblock %}

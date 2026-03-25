@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }}{% endblock %}
+
+{% block content %}
+<section class="hero">
+  {% if page.content %}
+  <div class="intro">{{ page.content }}</div>
+  {% endif %}
+</section>
+{% endblock %}
